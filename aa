@@ -75,7 +75,6 @@ connect () {
 clear
 su -c settings put global airplane_mode_on 1
 su -c am broadcast -a android.intent.action.AIRPLANE_MODE && su -c settings put global airplane_mode_on 0
-su -c am broadcast -a android.intent.action.AIRPLANE_MODE && su -c 'svc data enable' && su -c pm enable $App && su -c pm clear $App && $A4 && $s && $A2 && $s && $db && $eb && $E1 && $s && am start -n $App/$atividade && sleep 4 && $A3 && $s && clear
 check() {
     vpn=$(ifconfig | grep -c tun0)
     case $vpn in
