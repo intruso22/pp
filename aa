@@ -73,8 +73,6 @@ Menu() {
 
 connect () {
 clear
-su -c settings put global airplane_mode_on 1
-su -c am broadcast -a android.intent.action.AIRPLANE_MODE && su -c settings put global airplane_mode_on 0
 check() {
     vpn=$(ifconfig | grep -c tun0)
     case $vpn in
